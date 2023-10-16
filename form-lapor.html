@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/form-lapor.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-mobile">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    
+    <div class="container-fluid header-mobile"></div>
+    <div class="container-fluid form-mobile">
+        <form>
+            <div class="mb-3">
+              <label for="nama" class="form-label">Nama</label>
+              <input type="text" class="form-control" id="nama">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="pelapor">
+                <label class="form-check-label" for="pelapor">Untuk Diri Sendiri</label>
+            </div>
+            <div class="mb-3">
+                <label for="telp" class="form-label">No.Telepon</label>
+                <input type="text" class="form-control" id="telp">
+            </div>   
+            <div class="mb-3">
+              <label for="alamat-sekolah" class="form-label">Alamat Sekolah</label>
+              <div class="mb-3">
+                <select class="form-select" id="selprov">
+                  <option selected>Provinsi</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <select class="form-select" id="selkab">
+                  <option selected>Kabupaten/Kota</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <select class="form-select" id="selkec">
+                  <option selected>Kecamatan</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <select class="form-select" id="nama-sekolah">
+                  <option selected>Nama Sekolah</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </div>  
+            <div class="mb-3">
+              <label for="tanggal" class="form-label">Tanggal Kejadian</label>
+              <input type="text" class="form-control" id="tanggal">
+            </div>
+            <div class="mb-3">
+              <label for="tingkatan-bully" class="form-label">Tingkatan Pembullyan</label>
+              <div class="mb-3">
+                <select class="form-select" id="tingkatan-bully">
+                  <option selected>Ringan</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="deskripsi" class="form-label">Deskripsi</label>
+              <textarea class="form-control" id="deskripsi" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="bukti-title" class="form-label">Bukti Pendukung</label>
+              <input type="file" class="bukti-input" id="bukti" multiple>
+              <label for="bukti" class="container-fluid text-center align-self-center border border-2 rounded pt-4 pb-4 bukti-label">
+                <img class="img-fluid" src="./assets/svg/upload.svg" alt="upload">
+              </label>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="check-form">
+              <label class="form-check-label" for="check-form">Menyetujui laporan perundungan</label>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary" data-bs-toggle="button" id="send-laporan">Kirim</button>
+            </div>
+          </form>
+    </div>
+    <div class="container-fluid test-dekstop">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">@</span>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+      
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <span class="input-group-text" id="basic-addon2">@example.com</span>
+      </div>
+      
+      <div class="mb-3">
+        <label for="basic-url" class="form-label">Your vanity URL</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+        </div>
+        <div class="form-text" id="basic-addon4">Example help text goes outside the input group.</div>
+      </div>
+      
+      <div class="input-group mb-3">
+        <span class="input-group-text">$</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-text">.00</span>
+      </div>
+      
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+        <span class="input-group-text">@</span>
+        <input type="text" class="form-control" placeholder="Server" aria-label="Server">
+      </div>
+      
+      <div class="input-group">
+        <span class="input-group-text">With textarea</span>
+        <textarea class="form-control" aria-label="With textarea"></textarea>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
