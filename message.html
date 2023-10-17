@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/message.css">
+</head>
+<body>
+    <!-- mmobile -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-mobile shadow-sm">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#db-sidebar" aria-controls="db-sidebar" aria-label="Toggle docs navigation" style="border: none;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand d-flex flex-row align-items-center fw-bold" href="./index.html">
+                <img class="logo-header" src="./assets/img/Logo.png" alt="logo" style="height: 3rem;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border: none;">
+                <i class="bi bi-three-dots-vertical"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-semibold">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Edukasi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Cerita Kami</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Event</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Berita</a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="offcanvas-start offcanvas" tabindex="-1" id="db-sidebar" aria-labelledby="bd-sidebar-offcanvas-label" style="width: 60vw;">
+        <div class="offcanvas-header border-bottom shadow-sm">
+            <h5 class="offcanvas-title fw-bold" id="bdSidebarOffcanvasLabel">Dasboard</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#db-sidebar"></button>
+        </div>
+        <div class="offcanvas-body p-4">
+            <ul class="d-flex flex-column gap-2 list-unstyled fw-semibold fs-5">
+                <li>
+                    <a href="" class="text-decoration-none">
+                        <div class="container-fluid text-light rounded-3 p-2 ps-4 shadow d-flex flex-row align-items-center gap-2" style="background-color: var(--color7);">
+                            <i class="bi bi-person-badge" style="color: var(--color8);"></i>
+                            <h5 class="m-0" style="color: var(--color8);">Profil</h5>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="text-decoration-none">
+                        <div class="container-fluid text-light rounded-3 p-2 ps-4 shadow d-flex flex-row align-items-center gap-2" style="background-color: var(--color7);">
+                            <i class="bi bi-geo-alt-fill" style="color: var(--color8);"></i>
+                            <h5 class="m-0" style="color: var(--color8);">Alamat</h5>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="text-decoration-none">
+                        <div class="container-fluid text-light rounded-3 p-2 ps-4 shadow d-flex flex-row align-items-center gap-2" style="background-color: var(--color7);">
+                            <i class="bi bi-buildings-fill"  style="color: var(--color8);"></i>
+                            <h5 class="m-0" style="color: var(--color8);">Sekolah</h5>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="text-decoration-none">
+                        <div class="container-fluid text-light rounded-3 p-2 ps-4 shadow d-flex flex-row align-items-center gap-2" style="background-color: var(--color7);">
+                            <i class="bi bi-postcard-fill" style="color: var(--color8);"></i>
+                            <h5 class="m-0" style="color: var(--color8);">Laporan</h5>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="text-decoration-none">
+                        <div class="container-fluid text-light rounded-3 p-2 ps-4 shadow d-flex flex-row align-items-center gap-2" style="background-color: var(--color9);">
+                            <i class="bi bi-chat-left-dots-fill"  style="color: var(--color6);"></i>
+                            <h5 class="m-0" style="color: var(--color6);">Pesan</h5>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="text-decoration-none">
+                        <div class="container-fluid text-light rounded-3 p-2 ps-4 shadow d-flex flex-row align-items-center gap-2" style="background-color: var(--color7);">
+                            <i class="bi bi-box-arrow-right"  style="color: var(--color8);"></i>
+                            <h5 class="m-0" style="color: var(--color8);">Keluar</h5>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- desktop -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-desktop shadow-sm">
+        <div class="container-fluid ps-5 pe-5">
+          <div class="ps-5" id="navbarSupportedContent">
+            <ul class="navbar-nav d-flex flex-row align-items-center me-auto mb-2 mb-lg-0 fw-bold fs-5">
+              <li class="nav-item ps-3 pe-3">
+                <a class="nav-link" aria-current="page" href="#">Edukasi</a>
+              </li>
+              <li class="nav-item ps-3 pe-3">
+                <a class="nav-link" aria-current="page" href="#">Cerita Kami</a>
+              </li>
+            </ul>
+          </div>
+          <a class="navbar-brand d-flex flex-row align-items-center fw-bold" href="./index.html">
+            <img class="logo-header" src="./assets/img/Logo.png" alt="logo" style="height: 3.5rem;">
+          </a>
+          <div class="" id="navbarSupportedContent">
+            <ul class="navbar-nav d-flex flex-row align-items-center  me-auto mb-2 fw-bold fs-5">
+              <li class="nav-item ps-3 pe-3">
+                <a class="nav-link" aria-current="page" href="#">Event</a>
+              </li>
+              <li class="nav-item ps-3 pe-3">
+                <a class="nav-link" aria-current="page" href="#">Berita</a>
+              </li>
+              <li class="nav-item ps-3 pe-3">
+                <a class="nav-link p-0 d-flex flex-row align-items-center" aria-current="page" href="./login.html">
+                  <h1 class="m-0 fw-bold fs-5 pe-2"  aria-current="page" >Masuk</h1>
+                  <img src="./assets/svg/login.svg" alt="">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <footer class="footer-desktop pb-4"  style="background-color: var(--color5);">
+        <div class="container-fluid d-flex justify-content-between p-4 pb-5">
+          <div class="d-flex flex-row align-items-center gap-4 ps-4">
+            <img src="./assets/svg/logo-white.svg" alt="" style="width: 45px;">
+            <h1 class="text-light fs-4">Save Space Squad</h1>
+          </div>
+          <div class="d-flex flex-row gap-3 pe-4">
+            <a href=""><img src="./assets/svg/ig.svg" alt="instagram"></a>
+            <a href=""><img src="./assets/svg/twitter.svg" alt="twitter"></a>
+            <a href=""><img src="./assets/svg/fb.svg" alt="facebook"></a>
+          </div>
+        </div>
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
