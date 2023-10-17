@@ -12,9 +12,9 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-mobile shadow-sm">
         <div class="container-fluid">
-          <a class="navbar-brand fw-bold" href="./index.html">
-            <img class="logo-header" src="./assets/img/Logo.png" alt="logo">
-            Save Space Squad
+          <a class="navbar-brand d-flex flex-row align-items-center fw-bold" href="./index.html">
+            <img class="logo-header" src="./assets/img/Logo.png" alt="logo" style="height: 3rem;">
+            <h1 class="fw-bold fs-4 m-0">Save Space Squad</h1>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -118,7 +118,7 @@
             <div class="mb-3">
               <label for="bukti-title" class="form-label">Bukti Pendukung</label>
               <input type="file" class="bukti-input" id="bukti" multiple>
-              <label for="bukti" class="container-fluid text-center align-self-center border border-2 rounded pt-4 pb-4 bg-light bukti-label">
+              <label for="bukti" class="container-fluid text-center align-self-center border border-2 rounded pt-4 pb-4 bg-white bukti-label">
                 <img class="img-fluid" src="./assets/svg/upload.svg" alt="upload">
               </label>
             </div>
@@ -132,43 +132,171 @@
           </form>
     </div>
 
-    <div class="container-fluid test-dekstop">
-      <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">@</span>
-        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-      </div>
-      
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-        <span class="input-group-text" id="basic-addon2">@example.com</span>
-      </div>
-      
-      <div class="mb-3">
-        <label for="basic-url" class="form-label">Your vanity URL</label>
-        <div class="input-group">
-          <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
-          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dekstop shadow-sm">
+      <div class="container-fluid ps-5 pe-5">
+        <div class="ps-5" id="navbarSupportedContent">
+          <ul class="navbar-nav d-flex flex-row align-items-center me-auto mb-2 mb-lg-0 fw-bold fs-5">
+            <li class="nav-item ps-3 pe-3">
+              <a class="nav-link" aria-current="page" href="#">Edukasi</a>
+            </li>
+            <li class="nav-item ps-3 pe-3">
+              <a class="nav-link" aria-current="page" href="#">Cerita Kami</a>
+            </li>
+          </ul>
         </div>
-        <div class="form-text" id="basic-addon4">Example help text goes outside the input group.</div>
+        <a class="navbar-brand d-flex flex-row align-items-center fw-bold" href="./index.html">
+          <img class="logo-header" src="./assets/img/Logo.png" alt="logo" style="height: 3.5rem;">
+        </a>
+        <div class="" id="navbarSupportedContent">
+          <ul class="navbar-nav d-flex flex-row align-items-center  me-auto mb-2 fw-bold fs-5">
+            <li class="nav-item ps-3 pe-3">
+              <a class="nav-link" aria-current="page" href="#">Event</a>
+            </li>
+            <li class="nav-item ps-3 pe-3">
+              <a class="nav-link" aria-current="page" href="#">Berita</a>
+            </li>
+            <li class="nav-item ps-3 pe-3">
+              <a class="nav-link p-0 d-flex flex-row align-items-center" aria-current="page" href="./login.html">
+                <h1 class="m-0 fw-bold fs-5 pe-2"  aria-current="page" >Masuk</h1>
+                <img src="./assets/svg/login.svg" alt="">
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      
-      <div class="input-group mb-3">
-        <span class="input-group-text">$</span>
-        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-        <span class="input-group-text">.00</span>
+    </nav>
+
+    <div class="container-fluid header-dekstop pt-5 pb-5">
+      <div class="title">
+        <h1 class="text-center text-wrap fs-3 fw-semibold mb-4">Satu tindakan kebaikan bisa mengubah hidup seseorang<br>Mari bersama-sama hentikan perundungan dengan tindakan kebaikan</h1>
       </div>
-      
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Username" aria-label="Username">
-        <span class="input-group-text">@</span>
-        <input type="text" class="form-control" placeholder="Server" aria-label="Server">
-      </div>
-      
-      <div class="input-group">
-        <span class="input-group-text">With textarea</span>
-        <textarea class="form-control" aria-label="With textarea"></textarea>
+      <div class="subtitle">
+        <h2 class="text-center text-wrap fs-5 fw-normal">Selamat datang di layanan laporan anti-perudungan</h2>
       </div>
     </div>
+
+    <div class="svg-desktop">
+      <div class="cartoon">
+        <img id="cartoon-left" src="./assets/svg/content1.svg" alt="">
+        <img id="cartoon-right" src="./assets/svg/content2.svg" alt="">
+      </div>
+    </div>
+    
+    <div class="content-desktop">
+      <div class="content-desktop d-flex flex-column p-5 pt-0">
+        <div class="container-fluid d-flex justify-content-center">
+          <div class="p-3 text-center rounded-top-4 fw-bold border-container">Buat Laporan Perundungan</div>
+        </div>
+        <div class="container-fluid p-3 rounded-4 border-container">
+          <div class="container-fluid bg-light rounded-3 ">
+            <form class="p-4 pt-5">
+              <div class="mb-3">
+                <label for="nama" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="nama">
+              </div>
+              <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="pelapor">
+                  <label class="form-check-label" for="pelapor">Untuk Diri Sendiri</label>
+              </div>
+              <div class="col-6 mb-3">
+                  <label for="telp" class="form-label">No.Telepon</label>
+                  <input type="text" class="form-control" id="telp">
+              </div>
+              <div class="mb-3">
+                <label for="alamat-sekolah" class="form-label">Alamat Sekolah</label>
+                <div class="row ">
+                  <div class="col-6 mb-3">
+                    <select class="form-select" id="selprov">
+                      <option selected>Provinsi</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <select class="form-select" id="selkab">
+                      <option selected>Kabupaten/Kota</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6 mb-3">
+                    <select class="form-select" id="selkec">
+                      <option selected>Kecamatan</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <select class="form-select" id="nama-sekolah">
+                      <option selected>Nama Sekolah</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div>
+              </div>  
+              <div class="row">
+                <div class="col-6 mb-3">
+                  <label for="tanggal" class="form-label">Tanggal Kejadian</label>
+                  <input type="text" class="form-control" id="tanggal">
+                </div>
+                <div class="col-6 mb-3">
+                  <label for="tingkatan-bully" class="form-label">Tingkatan Pembullyan</label>
+                  <div class="mb-3">
+                    <select class="form-select" id="tingkatan-bully">
+                      <option selected>Ringan</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="deskripsi" class="form-label">Deskripsi</label>
+                <textarea class="form-control" id="deskripsi" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="bukti-title" class="form-label">Bukti Pendukung</label>
+                <input type="file" class="bukti-input" id="bukti" multiple>
+                <label for="bukti" class="container-fluid text-center align-self-center border border-2 rounded pt-4 pb-4 bg-white bukti-label">
+                  <img class="img-fluid" src="./assets/svg/upload.svg" alt="upload">
+                </label>
+              </div>
+              <div class="mb-3 form-check mb-4">
+                <input type="checkbox" class="form-check-input" id="check-form">
+                <label class="form-check-label" for="check-form">Menyetujui laporan perundungan</label>
+              </div>
+              <div class="d-grid gap-2 d-flex justify-content-md-end">
+                <button type="button" class="btn btn-secondary">Batalkan</button>
+                <button type="submit" class="btn btn-submit" data-bs-toggle="button" id="send-laporan" disabled>Kirim</button>
+              </div>   
+            </form>
+          </div> 
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer-desktop pb-4"  style="background-color: var(--color5);">
+      <div class="container-fluid d-flex justify-content-between p-4 pb-5">
+        <div class="d-flex flex-row align-items-center gap-4 ps-4">
+          <img src="./assets/svg/logo-white.svg" alt="" style="width: 45px;">
+          <h1 class="text-light fs-4">Save Space Squad</h1>
+        </div>
+        <div class="d-flex flex-row gap-3 pe-4">
+          <a href=""><img src="./assets/svg/ig.svg" alt="instagram"></a>
+          <a href=""><img src="./assets/svg/twitter.svg" alt="twitter"></a>
+          <a href=""><img src="./assets/svg/fb.svg" alt="facebook"></a>
+        </div>
+      </div>
+    </footer>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

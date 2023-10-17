@@ -1,3 +1,6 @@
+*{
+    font-family: 'Plus Jakarta Sans';
+}
 @keyframes upload-hover {
     0%{
         
@@ -7,46 +10,65 @@
     }
     
 }
+/* dekstop */
 @media (min-width: 992px) { 
-    .header-mobile, .form-mobile{
+    .header-mobile, .form-mobile, .navbar-mobile{
         display: none;
-        width: 0;
-        height: 0;
-        padding: 0;
-        margin: 0;
+    }
+    .border-container{
+        background-color: var(--color3);
+    }
+    .cartoon *{
+        box-sizing: border-box;
+    }
+    .cartoon{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        align-self: stretch;
+        position: relative;
+        flex: 1;
+        overflow: hidden;
+        top: -120px;
+        z-index: -1;
+    }
+    .cartoon img{
+        position: relative;
+        overflow: hidden;
+    }
+    #cartoon-left{
+        left: -150px;
+    } 
+    #cartoon-right{
+        right: -110px
     }
 }
+/* mobile */
 @media (max-width: 992px) { 
-    .test-dekstop > *{
+    .navbar-dekstop, .header-dekstop, .content-desktop *, .content-desktop ,.svg-desktop, footer{
         display: none;
-        width: 0;
-        height: 0;
-        padding: 0;
-        margin: 0;
-    }
-    .bukti-input{
-        display: none;
-
-    }
-    .bukti-label:hover{
-        cursor: pointer;
-        animation: upload-hover 0.4 ease-in-out both;
-    }
-    .logo-header{
-        height: 3em;
-    }
-    .header-mobile, .form-mobile, .navbar-mobile{
-        font-family: 'Plus Jakarta Sans' ;
     }
     .header-mobile, .form-mobile{
         background-color: var(--color6);
     }
-    .btn-submit{
-        background-color: var(--color5);
-        color: var(--color6);
-    }
-    .btn-submit:hover{
-        background-color: var(--color4);
-        color: var(--color6);
-    }
+}
+
+.bukti-input{
+    display: none;
+}
+.bukti-label:hover{
+    cursor: pointer;
+    animation: upload-hover 0.4 ease-in-out both;
+}
+.logo-header{
+    height: 3em;
+}
+.btn-submit{
+    background-color: var(--color5);
+    color: var(--color6);
+}
+.btn-submit:hover{
+    background-color: var(--color4);
+    color: var(--color6);
 }
