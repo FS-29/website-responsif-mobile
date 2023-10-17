@@ -1,1 +1,17 @@
+@font-face {
+    font-family: 'plus jakarta sans';
+    src: url('../assets/Font/PlusJakartaSans-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'plus jakart sans-italic';
+    src: url('../assets/font/PlusJakartaSans-Italic-VariableFont_wght.ttf');
+}
 
+:root{
+    --color1:#F8E9A1;
+    --color2:#F76C6C;
+    --color3:#A8D0E6;
+    --color4:#374785;
+    --color5:#24305E;
+    --color6:#F9FBFD;
+}
