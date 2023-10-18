@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./style/message.css">
 </head>
 <body>
-    <!-- mmobile -->
+    <!-- mobile -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-mobile shadow-sm">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#db-sidebar" aria-controls="db-sidebar" aria-label="Toggle docs navigation" style="border: none;">
@@ -101,6 +101,55 @@
         </div>
     </div>
 
+    <div class="container-fluid message-list p-0 ps-2 pt-2">
+        <div class="d-grid p-0 gap-2">
+            <button class="btn rounded-start-5 p-2 shadow" style="--bs-btn-border-width:0;" data-bs-toggle="offcanvas" data-bs-target="#db-message" aria-controls="db-message" aria-label="Toggle docs navigation" >
+                <div class="d-flex flex-row align-items-center gap-4 p-2" >
+                    <img src="./assets/img/dummys.jpg" class="rounded-circle" style="width: 60px; height: 60px;" alt="">
+                    <div class="d-flex flex-column align-items-start gap-1">
+                        <h5 class="fw-semibold" style="margin: 0;">Agus (konselor)</h5>
+                        <p class="" style="margin: 0;">halo!!!!!!! test</p>
+                    </div>
+                </div>
+            </button>
+            
+        </div>
+    </div>
+
+    <div class="offcanvas-bottom offcanvas" tabindex="-1" id="db-message" aria-labelledby="bd-message-offcanvas-label" style="height: 100vh;">
+        <div class="offcanvas-header border-bottom shadow-sm justify-content-start" style="background-color: var(--color3); color: var(--color5);">
+            <button type="button" class="btn p-1" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#db-message">
+                <i class="bi bi-arrow-left"></i>
+            </button>
+            <div class="d-flex flex-row align-items-center gap-4 p-2" >
+                <img src="./assets/img/dummys.jpg" class="rounded-circle" style="width: 60px; height: 60px;" alt="">
+                <div class="d-flex flex-column align-items-start gap-1">
+                    <h5 class="fw-semibold" style="margin: 0;">Agus</h5>
+                    <p class="" style="margin: 0;">konselor</p>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas-body p-0 d-flex flex-column justify-content-end mb-3">
+            <div class="d-flex flex-column justify-content-end gap-3 overflow-y-auto" id="message-body">
+                <div class="d-flex justify-content-start ps-4" id="pesan-masuk">
+                    <div class="rounded-4 ps-2 pe-2" style="max-width: 80vw; background-color: var(--color11);">
+                        <p class="m-2">test fwij efijwe fijweifji fwjbfib wbhfhb wijbefi j b af</p>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end pe-4" id="pesan-keluar">
+                    <div class="rounded-4 ps-2 pe-2" style="max-width: 80vw; background-color: var(--color12);">
+                        <p class="m-2">te fwjbfib wbhfhb wijbefi j b af</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="input-pesan" style="background-color: var(--color3);">
+            <div class="container-fluid d-flex flex-row justify-content-center gap-2 p-2" id="message-inpnut">
+                <input type="text" id="input-text" class="form-control rounded-4 ps-3 pe-3" >
+                <button class="rounded-circle btn" style="border: none;"><i class="bi bi-send-fill" style="color: var(--color6);"></i></button>
+            </div>
+        </div>
+    </div>
     <!-- desktop -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-desktop shadow-sm">
         <div class="container-fluid ps-5 pe-5">
