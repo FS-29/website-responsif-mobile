@@ -33,6 +33,9 @@
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="#">Berita</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Dashboard</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -132,7 +135,7 @@
           </form>
     </div>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dekstop shadow-sm">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-desktop shadow-sm position-fixed vw-100">
       <div class="container-fluid ps-5 pe-5">
         <div class="ps-5" id="navbarSupportedContent">
           <ul class="navbar-nav d-flex flex-row align-items-center me-auto mb-2 mb-lg-0 fw-bold fs-5">
@@ -155,25 +158,48 @@
             <li class="nav-item ps-3 pe-3">
               <a class="nav-link" aria-current="page" href="#">Berita</a>
             </li>
-            <li class="nav-item ps-3 pe-3">
-              <a class="nav-link p-0 d-flex flex-row align-items-center" aria-current="page" href="./login.html">
-                <h1 class="m-0 fw-bold fs-5 pe-2"  aria-current="page" >Masuk</h1>
-                <img src="./assets/svg/login.svg" alt="">
-              </a>
+            <li class="nav-item ps-3 pe-5">
+              <button class="nav-link p-0 d-flex flex-row align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                  <img src="./assets/img/dummys.jpg" class="rounded-circle" alt="" style="width: 40px;">
+              </button>
+              <div class="dropdown-menu rounded-4 " style="background-color: var(--color3); left: auto; right: 50px; top: 60px; ">
+                  <div class="d-flex flex-column align-items-center gap-3 p-3 ">
+                      <div class="d-flex flex-column align-items-center gap-2">
+                          <img src="./assets/img/dummys.jpg" class="rounded-circle" style="width: 100px;" alt="">
+                          <h4 class="fw-bold">agus</h4>
+                      </div>
+                      <a href="./message.html" class="container-fluid p-0">
+                          <button  class="border-0 rounded-3 shadow container-fluid p-0" style="background-color: var(--color6);">
+                              <div class="container-fluid p-2 ps-4 d-flex flex-row align-items-center gap-2" >
+                                  <i class="bi bi-person-fill"  style="color: var(--color5);"></i>
+                                  <h5 class="m-0" style="color: var(--color5);">Dashboard</h5>
+                              </div>
+                          </button>
+                      </a>
+                      <a href="./login.html" class="container-fluid p-0">
+                          <button  class="border-0 rounded-3 shadow container-fluid p-0" style="background-color: var(--color6);">
+                              <div class="container-fluid p-2 ps-4 d-flex flex-row align-items-center gap-2" >
+                                  <i class="bi bi-box-arrow-right"  style="color: var(--color5);"></i>
+                                  <h5 class="m-0" style="color: var(--color5);">Keluar</h5>
+                              </div>
+                          </button>
+                      </a>
+                  </div> 
+              </div>
             </li>
           </ul>
         </div>
       </div>
-    </nav>
+  </nav>
 
-    <div class="container-fluid header-dekstop pt-5 pb-5">
-      <div class="title">
-        <h1 class="text-center text-wrap fs-3 fw-semibold mb-4">Satu tindakan kebaikan bisa mengubah hidup seseorang<br>Mari bersama-sama hentikan perundungan dengan tindakan kebaikan</h1>
-      </div>
-      <div class="subtitle">
-        <h2 class="text-center text-wrap fs-5 fw-normal">Selamat datang di layanan laporan anti-perudungan</h2>
-      </div>
+  <div class="container-fluid header-dekstop pb-5" style="padding-top: 120px;" >
+    <div class="title">
+      <h1 class="text-center text-wrap fs-3 fw-semibold mb-4">Satu tindakan kebaikan bisa mengubah hidup seseorang<br>Mari bersama-sama hentikan perundungan dengan tindakan kebaikan</h1>
     </div>
+    <div class="subtitle">
+      <h2 class="text-center text-wrap fs-5 fw-normal">Selamat datang di layanan laporan anti-perudungan</h2>
+    </div>
+  </div>
 
     <div class="svg-desktop">
       <div class="cartoon">
