@@ -37,6 +37,7 @@
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="#">Berita</a>
                 </li>
+                
                 </ul>
             </div>
         </div>
@@ -50,48 +51,48 @@
         <div class="offcanvas-body p-4">
             <ul class="d-flex flex-column gap-2 list-unstyled fw-semibold fs-5">
                 <li>
-                    <a href="" class="text-decoration-none">
-                        <div class="container-fluid text-light rounded-3 p-2 ps-4 shadow d-flex flex-row align-items-center gap-2" style="background-color: var(--color7);">
+                    <button href="" class="border-0 rounded-3 shadow container-fluid p-0" style="background-color: var(--color7);">
+                        <div class="container-fluid p-2 ps-4 d-flex flex-row align-items-center gap-2" >
                             <i class="bi bi-person-badge" style="color: var(--color8);"></i>
                             <h5 class="m-0" style="color: var(--color8);">Profil</h5>
                         </div>
                     </a>
                 </li>
                 <li>
-                    <a href="" class="text-decoration-none">
-                        <div class="container-fluid text-light rounded-3 p-2 ps-4 shadow d-flex flex-row align-items-center gap-2" style="background-color: var(--color7);">
+                    <button href="" class="border-0 rounded-3 shadow container-fluid p-0" style="background-color: var(--color7);">
+                        <div class="container-fluid p-2 ps-4 d-flex flex-row align-items-center gap-2" >
                             <i class="bi bi-geo-alt-fill" style="color: var(--color8);"></i>
                             <h5 class="m-0" style="color: var(--color8);">Alamat</h5>
                         </div>
                     </a>
                 </li>
                 <li>
-                    <a href="" class="text-decoration-none">
-                        <div class="container-fluid text-light rounded-3 p-2 ps-4 shadow d-flex flex-row align-items-center gap-2" style="background-color: var(--color7);">
+                    <button href="" class="border-0 rounded-3 shadow container-fluid p-0" style="background-color: var(--color7);">
+                        <div class="container-fluid p-2 ps-4 d-flex flex-row align-items-center gap-2" >
                             <i class="bi bi-buildings-fill"  style="color: var(--color8);"></i>
                             <h5 class="m-0" style="color: var(--color8);">Sekolah</h5>
                         </div>
-                    </a>
+                    </button>
                 </li>
                 <li>
-                    <a href="" class="text-decoration-none">
-                        <div class="container-fluid text-light rounded-3 p-2 ps-4 shadow d-flex flex-row align-items-center gap-2" style="background-color: var(--color7);">
+                    <button href="" class="border-0 rounded-3 shadow container-fluid p-0" style="background-color: var(--color7);">
+                        <div class="container-fluid p-2 ps-4 d-flex flex-row align-items-center gap-2" >
                             <i class="bi bi-postcard-fill" style="color: var(--color8);"></i>
                             <h5 class="m-0" style="color: var(--color8);">Laporan</h5>
                         </div>
                     </a>
                 </li>
                 <li>
-                    <a href="" class="text-decoration-none">
-                        <div class="container-fluid text-light rounded-3 p-2 ps-4 shadow d-flex flex-row align-items-center gap-2" style="background-color: var(--color9);">
+                    <button href="" class="border-0 rounded-3 shadow container-fluid p-0" style="background-color: var(--color9);">
+                        <div class="container-fluid p-2 ps-4 d-flex flex-row align-items-center gap-2" >
                             <i class="bi bi-chat-left-dots-fill"  style="color: var(--color6);"></i>
                             <h5 class="m-0" style="color: var(--color6);">Pesan</h5>
                         </div>
                     </a>
                 </li>
                 <li>
-                    <a href="" class="text-decoration-none">
-                        <div class="container-fluid text-light rounded-3 p-2 ps-4 shadow d-flex flex-row align-items-center gap-2" style="background-color: var(--color7);">
+                    <button href="" class="border-0 rounded-3 shadow container-fluid p-0" style="background-color: var(--color7);">
+                        <div class="container-fluid p-2 ps-4 d-flex flex-row align-items-center gap-2" >
                             <i class="bi bi-box-arrow-right"  style="color: var(--color8);"></i>
                             <h5 class="m-0" style="color: var(--color8);">Keluar</h5>
                         </div>
@@ -101,7 +102,7 @@
         </div>
     </div>
 
-    <div class="container-fluid message-list p-0 ps-2 pt-2">
+    <div class="container-fluid message-list mobile-view p-0 ps-2 pt-2">
         <div class="d-grid p-0 gap-2">
             <button class="btn rounded-start-5 p-2 shadow" style="--bs-btn-border-width:0;" data-bs-toggle="offcanvas" data-bs-target="#db-message" aria-controls="db-message" aria-label="Toggle docs navigation" >
                 <div class="d-flex flex-row align-items-center gap-4 p-2" >
@@ -118,7 +119,7 @@
 
     <div class="offcanvas-bottom offcanvas" tabindex="-1" id="db-message" aria-labelledby="bd-message-offcanvas-label" style="height: 100vh;">
         <div class="offcanvas-header border-bottom shadow-sm justify-content-start" style="background-color: var(--color3); color: var(--color5);">
-            <button type="button" class="btn p-1" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#db-message">
+            <button type="button" class="btn p-1 border-0" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#db-message">
                 <i class="bi bi-arrow-left"></i>
             </button>
             <div class="d-flex flex-row align-items-center gap-4 p-2" >
@@ -150,8 +151,9 @@
             </div>
         </div>
     </div>
+
     <!-- desktop -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-desktop shadow-sm">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-desktop shadow-sm position-fixed vw-100">
         <div class="container-fluid ps-5 pe-5">
           <div class="ps-5" id="navbarSupportedContent">
             <ul class="navbar-nav d-flex flex-row align-items-center me-auto mb-2 mb-lg-0 fw-bold fs-5">
@@ -174,18 +176,151 @@
               <li class="nav-item ps-3 pe-3">
                 <a class="nav-link" aria-current="page" href="#">Berita</a>
               </li>
-              <li class="nav-item ps-3 pe-3">
-                <a class="nav-link p-0 d-flex flex-row align-items-center" aria-current="page" href="./login.html">
-                  <h1 class="m-0 fw-bold fs-5 pe-2"  aria-current="page" >Masuk</h1>
-                  <img src="./assets/svg/login.svg" alt="">
-                </a>
+              <li class="nav-item ps-3 pe-5">
+                <button class="nav-link p-0 d-flex flex-row align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                    <img src="./assets/img/dummys.jpg" class="rounded-circle" alt="" style="width: 40px;">
+                </button>
+                <div class="dropdown-menu rounded-4 " style="background-color: var(--color3); left: auto; right: 50px; top: 60px; ">
+                    <div class="d-flex flex-column align-items-center gap-3 p-3 ">
+                        <div class="d-flex flex-column align-items-center gap-2">
+                            <img src="./assets/img/dummys.jpg" class="rounded-circle" style="width: 100px;" alt="">
+                            <h4 class="fw-bold">agus</h4>
+                        </div>
+                        <a href="./message.html" class="container-fluid p-0">
+                            <button  class="border-0 rounded-3 shadow container-fluid p-0" style="background-color: var(--color6);">
+                                <div class="container-fluid p-2 ps-4 d-flex flex-row align-items-center gap-2" >
+                                    <i class="bi bi-person-fill"  style="color: var(--color5);"></i>
+                                    <h5 class="m-0" style="color: var(--color5);">Dashboard</h5>
+                                </div>
+                            </button>
+                        </a>
+                        <a href="./login.html" class="container-fluid p-0">
+                            <button  class="border-0 rounded-3 shadow container-fluid p-0" style="background-color: var(--color6);">
+                                <div class="container-fluid p-2 ps-4 d-flex flex-row align-items-center gap-2" >
+                                    <i class="bi bi-box-arrow-right"  style="color: var(--color5);"></i>
+                                    <h5 class="m-0" style="color: var(--color5);">Keluar</h5>
+                                </div>
+                            </button>
+                        </a>
+                    </div> 
+                </div>
               </li>
             </ul>
           </div>
         </div>
-      </nav>
+    </nav>
 
-      <footer class="footer-desktop pb-4"  style="background-color: var(--color5);">
+    <div class=" desktop-view " style="padding-top: 80px;">
+        <div class="d-flex flex-row flex-strech">
+            <div class="col-3 col-xl-2 border-end border-3 p-4 pt-5">
+                <ul class="d-flex flex-column gap-2 list-unstyled fw-semibold fs-5">
+                    <li>
+                        <a href="" class="text-decoration-none">
+                            <div class="container-fluid p-2 ps-4 pb-4 d-flex flex-column align-items-center gap-3">
+                                <img src="./assets/img/dummys.jpg" class="rounded-circle" style="height: 8rem;" alt="" id="tumbnail-profil">
+                                <h5 class="m-0" style="color: var(--color5);">Profil</h5>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <button href="" class="border-0 rounded-3 shadow container-fluid p-0" style="background-color: var(--color7);">
+                            <div class="container-fluid p-2 ps-4 d-flex flex-row align-items-center gap-2" >
+                                <i class="bi bi-geo-alt-fill" style="color: var(--color8);"></i>
+                                <h5 class="m-0" style="color: var(--color8);">Alamat</h5>
+                            </div>
+                        </button>
+                    </li>
+                    <li>
+                        <button href="" class="border-0 rounded-3 shadow container-fluid p-0" style="background-color: var(--color7);">
+                            <div class="container-fluid p-2 ps-4 d-flex flex-row align-items-center gap-2" >
+                                <i class="bi bi-buildings-fill"  style="color: var(--color8);"></i>
+                                <h5 class="m-0" style="color: var(--color8);">Sekolah</h5>
+                            </div>
+                        </button>
+                    </li>
+                    <li>
+                        <button href="" class="border-0 rounded-3 shadow container-fluid p-0" style="background-color: var(--color7);">
+                            <div class="container-fluid p-2 ps-4 d-flex flex-row align-items-center gap-2" >
+                                <i class="bi bi-postcard-fill" style="color: var(--color8);"></i>
+                                <h5 class="m-0" style="color: var(--color8);">Laporan</h5>
+                            </div>
+                        </button>
+                    </li>
+                    <li>
+                        <button href="" class="border-0 rounded-3 shadow container-fluid p-0" style="background-color: var(--color9);">
+                            <div class="container-fluid p-2 ps-4 d-flex flex-row align-items-center gap-2" >
+                                <i class="bi bi-chat-left-dots-fill"  style="color: var(--color6);"></i>
+                                <h5 class="m-0" style="color: var(--color6);">Pesan</h5>
+                            </div>
+                        </button>
+                    </li>
+                    <li>
+                        <a href="./login.html" class="container-fluid p-0">
+                            <button href="" class="border-0 rounded-3 shadow container-fluid p-0" style="background-color: var(--color7);">
+                                <div class="container-fluid p-2 ps-4 d-flex flex-row align-items-center gap-2" >
+                                    <i class="bi bi-box-arrow-right"  style="color: var(--color8);"></i>
+                                    <h5 class="m-0" style="color: var(--color8);">Keluar</h5>
+                                </div>
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-3 border-end border-3">
+                <div class="container-fluid message-list p-0 ps-2 pt-2">
+                    <div class="d-grid p-0 gap-2">
+                        <button class="btn rounded-start-5 p-2 shadow" style="--bs-btn-border-width:0;" data-bs-toggle="" data-bs-target="" aria-controls="" aria-label="" >
+                            <div class="d-flex flex-row align-items-center gap-4 p-2" >
+                                <img src="./assets/img/dummys.jpg" class="rounded-circle" style="width: 60px; height: 60px;" alt="">
+                                <div class="d-flex flex-column align-items-start gap-1">
+                                    <h5 class="fw-semibold" style="margin: 0;">Agus</h5>
+                                    <p class="" style="margin: 0;">halo!!!!!!! test</p>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-xl-7 ps-0 d-flex flex-column" style="height: 80vh;">
+                <div class="d-flex border-bottom shadow-sm justify-content-start" style="background-color: var(--color3); color: var(--color5);">
+                    <button type="button" class="btn p-1 border-0" data-bs-dismiss="" aria-label="Close" data-bs-target="">
+                        <i class="bi bi-arrow-left"></i>
+                    </button>
+                    <div class="d-flex flex-row align-items-center gap-4 p-2" >
+                        <img src="./assets/img/dummys.jpg" class="rounded-circle" style="width: 60px; height: 60px;" alt="">
+                        <div class="d-flex flex-column align-items-start gap-1">
+                            <h5 class="fw-semibold" style="margin: 0;">Agus</h5>
+                            <p class="" style="margin: 0;">konselor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" d-flex flex-column justify-content-end flex-fill" >
+                    <div class="p-0 d-flex flex-column justify-content-end mb-3">
+                        <div class="d-flex flex-column justify-content-end gap-3 overflow-y-auto" id="message-body">
+                            <div class="d-flex justify-content-start ps-4" id="pesan-masuk">
+                                <div class="rounded-4 ps-2 pe-2" style="max-width: 80vw; background-color: var(--color11);">
+                                    <p class="m-2">test fwij efijwe fijweifji fwjbfib wbhfhb wijbefi j b af</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end pe-4" id="pesan-keluar">
+                                <div class="rounded-4 ps-2 pe-2" style="max-width: 80vw; background-color: var(--color12);">
+                                    <p class="m-2">te fwjbfib wbhfhb wijbefi j b af</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-pesan" style="background-color: var(--color3);">
+                        <div class="container-fluid d-flex flex-row justify-content-center gap-2 p-2" id="message-inpnut">
+                            <input type="text" id="input-text" class="form-control rounded-4 ps-3 pe-3" >
+                            <button class="rounded-circle btn" style="border: none;"><i class="bi bi-send-fill" style="color: var(--color6);"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+     <footer class="footer-desktop pb-4"  style="background-color: var(--color5);">
         <div class="container-fluid d-flex justify-content-between p-4 pb-5">
           <div class="d-flex flex-row align-items-center gap-4 ps-4">
             <img src="./assets/svg/logo-white.svg" alt="" style="width: 45px;">
@@ -197,7 +332,7 @@
             <a href=""><img src="./assets/svg/fb.svg" alt="facebook"></a>
           </div>
         </div>
-      </footer>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

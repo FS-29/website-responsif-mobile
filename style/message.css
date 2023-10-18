@@ -3,13 +3,13 @@
 }
 /* dekstop */
 @media (min-width: 992px) { 
-    .navbar-mobile{
+    .navbar-mobile, .mobile-view{
         display: none;
     }
 }
 /* mobile */
 @media (max-width: 992px) { 
-    .navbar-desktop, footer{
+    .navbar-desktop, footer, .desktop-view{
         display: none;
     }
 }
