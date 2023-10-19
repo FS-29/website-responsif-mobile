@@ -45,6 +45,7 @@ if (winWidth<=992) {
 const scProv = document.querySelector(brClassSel+'#selprov');
 const scKab = document.querySelector(brClassSel+'#selkab');
 const scKec = document.querySelector(brClassSel+'#selkec');
+const scJenjang= document.querySelector(brClassSel+'#jenjang-sekolah');
 const scNama= document.querySelector(brClassSel+'#nama-sekolah');
 const tingkat= document.querySelector(brClassSel+'#tingkatan-bully');
 
@@ -58,7 +59,8 @@ function handleGetForm() {
         tlp:noTlp.value, 
         prov:scProv.value, 
         kab:scKab.value, 
-        kec:scKec.value, 
+        kec:scKec.value,
+        jenjan:scJenjang.value, 
         sekolah:scNama.value,
         tanggal:tgl.value,
         tingkatan:tingkat.value,
@@ -130,6 +132,23 @@ async function getKec (kab){
         console.log('cant fetch API')
     }
 }
+async function getSekolah (jenjang, prov){
+    prov = provId.find((data)=>data.id==prov).idSekolah
+    // console.log(prov)
+    try {
+        let respons = await fetch(`https://api-sekolah-indonesia.vercel.app/sekolah/${jenjang}?provinsi=${prov}&page=1&perPage=10000`)
+        let data = await respons.json();
+        data.dataSekolah.map((data)=>{
+            let opt = document.createElement("option")
+            opt.text = data.sekolah
+            opt.value = data.npsn
+            scNama.appendChild(opt);
+        })
+        // console.log(data.dataSekolah)
+    } catch (error) {
+        
+    }
+}
 getProv()
 scProv.addEventListener('change',()=>{
     if (scProv.value!='') {
@@ -139,6 +158,15 @@ scProv.addEventListener('change',()=>{
         opt.value = ''
         scKab.appendChild(opt)
         getKab(scProv.value)
+
+        if (scJenjang.value!='') {
+            scNama.innerHTML='';
+            let optNama = document.createElement("option")
+            optNama.text = "Nama Sekolah"
+            optNama.value = ''
+            scKab.appendChild(optNama)
+            getSekolah(scJenjang.value,scProv.value)   
+        }
     }
 })
 scKab.addEventListener('change',()=>{
@@ -151,17 +179,17 @@ scKab.addEventListener('change',()=>{
         getKec(scKab.value)
     }
 })
-
-async function getSekolah (){
-    try {
-        let respons = await fetch(`https://api-sekolah-indonesia.vercel.app/sekolah/SD?provinsi=340000&page=1&perPage=1`)
-        let data = await respons.json();
-        console.log(data)
-    } catch (error) {
-        
+scJenjang.addEventListener('change',()=>{
+    if (scJenjang.value!=''&&scProv.value!='') {
+        scNama.innerHTML='';
+        let optNama = document.createElement("option")
+        optNama.text = "Nama Sekolah"
+        optNama.value = ''
+        scKab.appendChild(optNama)
+        getSekolah(scJenjang.value,scProv.value)
     }
-}
-getSekolah()
+})
+// getSekolah('sd','35')
 
 document.querySelector(brClassSel+'#send-laporan').addEventListener("click",(event)=>{
     event.preventDefault;
