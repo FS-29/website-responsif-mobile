@@ -1,6 +1,41 @@
 const winWidth = window.innerWidth;
 let brClassSel = '';
-
+const provId =[
+    {id:'11', idSekolah:'060000'}, //aceh
+    {id:'12', idSekolah:'070000'}, //sumut
+    {id:'13', idSekolah:'080000'}, //sumbar
+    {id:'14', idSekolah:'090000'}, //riau
+    {id:'15', idSekolah:'100000'}, //jambi
+    {id:'16', idSekolah:'110000'}, //sumsel
+    {id:'17', idSekolah:'260000'}, //bengkulu
+    {id:'18', idSekolah:'120000'}, //lampung
+    {id:'19', idSekolah:'290000'}, //kep bangka belitung
+    {id:'21', idSekolah:'310000'}, //kep riau
+    {id:'31', idSekolah:'010000'}, //dkijakarta
+    {id:'32', idSekolah:'020000'}, //jawa barat
+    {id:'33', idSekolah:'030000'}, //jawa tengah
+    {id:'34', idSekolah:'040000'}, //di yogyakarta
+    {id:'35', idSekolah:'050000'}, //jawatimur
+    {id:'36', idSekolah:'280000'}, //banten
+    {id:'51', idSekolah:'220000'}, //bali
+    {id:'52', idSekolah:'230000'}, //NTB
+    {id:'53', idSekolah:'240000'}, //NTT
+    {id:'61', idSekolah:'130000'}, //kalbar
+    {id:'62', idSekolah:'140000'}, //kalteng
+    {id:'63', idSekolah:'150000'}, //kalsel
+    {id:'64', idSekolah:'160000'}, //kaltim
+    {id:'65', idSekolah:'340000'}, //kalut
+    {id:'71', idSekolah:'170000'}, //sulut
+    {id:'72', idSekolah:'180000'}, //sulteng
+    {id:'73', idSekolah:'190000'}, //sulsel
+    {id:'74', idSekolah:'200000'}, //sultenggara
+    {id:'75', idSekolah:'300000'}, //gorontalo
+    {id:'76', idSekolah:'330000'}, //sulbar
+    {id:'81', idSekolah:'210000'}, //maluku
+    {id:'82', idSekolah:'270000'}, //maluku utara
+    {id:'91', idSekolah:'320000'}, //papua barat
+    {id:'94', idSekolah:'250000'}, //papua
+]
 if (winWidth<=992) {
     brClassSel = '.form-mobile '
 } else {
@@ -59,6 +94,7 @@ async function getProv (){
             opt.text = data.name
             opt.value = data.id
             scProv.appendChild(opt);
+            // console.log(data)
         })
     } catch (error) {
         console.log('cant fetch API')
@@ -94,7 +130,6 @@ async function getKec (kab){
         console.log('cant fetch API')
     }
 }
-
 getProv()
 scProv.addEventListener('change',()=>{
     if (scProv.value!='') {
@@ -116,6 +151,17 @@ scKab.addEventListener('change',()=>{
         getKec(scKab.value)
     }
 })
+
+async function getSekolah (){
+    try {
+        let respons = await fetch(`https://api-sekolah-indonesia.vercel.app/sekolah/SD?provinsi=340000&page=1&perPage=1`)
+        let data = await respons.json();
+        console.log(data)
+    } catch (error) {
+        
+    }
+}
+getSekolah()
 
 document.querySelector(brClassSel+'#send-laporan').addEventListener("click",(event)=>{
     event.preventDefault;
