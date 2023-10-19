@@ -267,7 +267,7 @@ document.querySelector(brClassSel+'#send-laporan').addEventListener("click",(eve
     // console.log(handleGetForm())
     data = handleGetForm();
     sendLaporan(
-        idUser=1,
+        idUser=newData.id,
         nama=data.name,
         nomor_Tlp=data.tlp,
         school_Prov=data.prov,
