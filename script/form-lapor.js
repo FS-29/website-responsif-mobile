@@ -36,6 +36,31 @@ const provId =[
     {id:'91', idSekolah:'320000'}, //papua barat
     {id:'94', idSekolah:'250000'}, //papua
 ]
+const URL_API_PROFIL = 'https://6530a73e6c756603295ee17b.mockapi.io/profil'
+let newData;
+
+async function getDataFrom(localData) {
+    const response = await fetch(URL_API_PROFIL)
+    const userData = await response.json()
+
+    newData = userData.filter((data)=>data.email==localData)[0]
+    document.querySelector('#nav-profil-img').src = newData.avatar
+    document.querySelector('#profil-img').src = newData.avatar
+    document.querySelector('#profil-name').innerHTML = newData.name
+}
+
+function checkStateLogin() {
+    const data = localStorage.getItem('email');
+    if (data) {
+        getDataFrom(localData=data)
+    } else {
+        window.location.href = 'index.html';
+    }
+}
+
+checkStateLogin()
+
+
 if (winWidth<=992) {
     brClassSel = '.form-mobile '
 } else {
@@ -48,22 +73,22 @@ const scKec = document.querySelector(brClassSel+'#selkec');
 const scJenjang= document.querySelector(brClassSel+'#jenjang-sekolah');
 const scNama= document.querySelector(brClassSel+'#nama-sekolah');
 const tingkat= document.querySelector(brClassSel+'#tingkatan-bully');
+const noTlp = document.querySelector(brClassSel+'#telp');
 
 function handleGetForm() {    
     const nama = document.querySelector(brClassSel+'#nama');
-    const noTlp = document.querySelector(brClassSel+'#telp');
     const tgl= document.querySelector(brClassSel+'#tanggal');
     const deskripsi= document.querySelector(brClassSel+'#deskripsi');
     return ({
         name:nama.value,  
         tlp:noTlp.value, 
-        prov:scProv.value, 
-        kab:scKab.value, 
-        kec:scKec.value,
-        jenjan:scJenjang.value, 
-        sekolah:scNama.value,
+        prov:scProv.options[scProv.selectedIndex].text, 
+        kab:scKab.options[scKab.selectedIndex].text, 
+        kec:scKec.options[scKec.selectedIndex].text,
+        jenjang:scJenjang.options[scJenjang.selectedIndex].text, 
+        sekolah:scNama.options[scNama.selectedIndex].text,
         tanggal:tgl.value,
-        tingkatan:tingkat.value,
+        tingkatan:tingkat.options[tingkat.selectedIndex].text,
         desc:deskripsi.value,
     });
 }
@@ -72,7 +97,13 @@ document.querySelector(brClassSel+'#pelapor').addEventListener('change', (event)
     if (event.currentTarget.checked) {
         document.querySelector(brClassSel+'#telpContainer').className = "d-none"
         document.querySelector(brClassSel+'#alamatContainer').className = "d-none"
-        
+        noTlp.value = newData.telepon
+        scProv.innerHTML = `<option value="ada" selected>${newData.prov}</option>`
+        scKab.innerHTML = `<option value="ada" selected>${newData.kab}</option>`
+        scKec.innerHTML = `<option value="ada" selected>${newData.kec}</option>`
+        scJenjang.innerHTML = `<option value="ada" selected>${newData.jenjang}</option>`
+        scNama.innerHTML = `<option value="ada" selected>${newData.sekolah}</option>`
+        // console.log(newData)
     } else {
         document.querySelector(brClassSel+'#telpContainer').className = (winWidth<=992 ? "":"col-6 ")+"mb-3"
         document.querySelector(brClassSel+'#alamatContainer').className = "mb-3"
@@ -136,7 +167,7 @@ async function getSekolah (jenjang, prov){
     prov = provId.find((data)=>data.id==prov).idSekolah
     // console.log(prov)
     try {
-        let respons = await fetch(`https://api-sekolah-indonesia.vercel.app/sekolah/${jenjang}?provinsi=${prov}&page=1&perPage=10000`)
+        let respons = await fetch(`https://api-sekolah-indonesia.vercel.app/sekolah/${jenjang}?provinsi=${prov}&page=1&perPage=5000`)
         let data = await respons.json();
         data.dataSekolah.map((data)=>{
             let opt = document.createElement("option")
@@ -189,9 +220,63 @@ scJenjang.addEventListener('change',()=>{
         getSekolah(scJenjang.value,scProv.value)
     }
 })
-// getSekolah('sd','35')
+
+async function sendLaporan(
+    idUser,
+    nama,
+    nomor_Tlp,
+    school_Prov,
+    school_Kab,
+    school_Kec,
+    school_Jenjang,
+    school_Nama,
+    tanggal,
+    tingkatan,
+    deskripsi
+){
+    try {
+        const response = await fetch(URL_API_PROFIL+`/${idUser}/laporan`,{
+            method:'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                nama: nama,
+                nomorTlp: nomor_Tlp,
+                schoolProv: school_Prov,
+                schoolKab: school_Kab,
+                schoolKec: school_Kec,
+                schoolJenjang: school_Jenjang,
+                schoolNama: school_Nama,
+                tanggal: tanggal,
+                tingkatanBully: tingkatan,
+                deskripsi: deskripsi,
+            })
+        });
+        location.reload()
+        // const result = await response.json();
+        // console.log(result);
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 document.querySelector(brClassSel+'#send-laporan').addEventListener("click",(event)=>{
     event.preventDefault;
-    console.log(handleGetForm())
+    // console.log(handleGetForm())
+    data = handleGetForm();
+    sendLaporan(
+        idUser=1,
+        nama=data.name,
+        nomor_Tlp=data.tlp,
+        school_Prov=data.prov,
+        school_Kab=data.kab,
+        school_Kec=data.kec,
+        school_Jenjang=data.jenjang,
+        school_Nama=data.sekolah,
+        tanggal=data.tanggal,
+        tingkatan=data.tingkatan,
+        deskripsi=data.desc
+    )
 })
