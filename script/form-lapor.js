@@ -105,7 +105,18 @@ document.querySelector(brClassSel+'#pelapor').addEventListener('change', (event)
         scNama.innerHTML = `<option value="ada" selected>${newData.sekolah}</option>`
         // console.log(newData)
     } else {
-        document.querySelector(brClassSel+'#telpContainer').className = (winWidth<=992 ? "":"col-6 ")+"mb-3"
+        noTlp.value = ''
+        scProv.innerHTML = `<option value="ada" selected>Provinsi</option>`
+        scKab.innerHTML = `<option value="ada" selected>Kabupaten/Kota</option>`
+        scKec.innerHTML = `<option value="ada" selected>Kecamatan</option>`
+        scJenjang.innerHTML = `<option value="">jenjang-sekolah</option>
+        <option value="sd">SD</option>
+        <option value="smp">SMP</option>
+        <option value="sma">SMA</option>
+        <option value="smk">SMK</option>`
+        scNama.innerHTML = `<option value="ada" selected>Nama Sekolah</option>`
+        getProv()
+        document.querySelector(brClassSel+'#telpContainer').className = (winWidth<=768 ? "":"col-6 ")+"mb-3"
         document.querySelector(brClassSel+'#alamatContainer').className = "mb-3"
     }
 })
