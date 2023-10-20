@@ -61,7 +61,7 @@ function checkStateLogin() {
 checkStateLogin()
 
 
-if (winWidth<=992) {
+if (winWidth<=768) {
     brClassSel = '.form-mobile '
 } else {
     brClassSel = '.content-desktop '
@@ -254,11 +254,13 @@ async function sendLaporan(
                 deskripsi: deskripsi,
             })
         });
+        alert('Laporan berhasil dikirim')
         location.reload()
         // const result = await response.json();
         // console.log(result);
     } catch (error) {
         console.log(error)
+        alert('Laporan gagal dikirim')
     }
 }
 
