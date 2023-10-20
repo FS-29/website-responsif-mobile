@@ -1,0 +1,37 @@
+*{
+    font-family: 'Plus Jakarta Sans';
+}
+/* dekstop */
+@media (min-width: 768px) { 
+    .navbar-mobile, .mobile-view{
+        display: none;
+    }
+}
+/* mobile */
+@media (max-width: 768px) { 
+    .navbar-desktop, footer, .desktop-view{
+        display: none;
+    }
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+.message-list button{
+    background-color: var(--color11);
+}
+.message-list button:active{
+    background-color: var(--color5);
+}
+.message-list button:focus{
+    background-color: var(--color11);
+}
+.input-pesan button{
+    background-color: var(--color5);
+}
+.input-pesan button:active{
+    background-color: var(--color3);
+}
+.input-pesan button:focus{
+    background-color: var(--color5);
+}
