@@ -280,3 +280,7 @@ document.querySelector(brClassSel+'#send-laporan').addEventListener("click",(eve
         deskripsi=data.desc
     )
 })
+
+document.querySelector('#btn-logout').addEventListener("click",()=>{
+    localStorage.removeItem("email");
+})
