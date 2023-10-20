@@ -82,3 +82,12 @@ function checkStateLogin() {
 
 checkStateLogin()
 getDataKonselor()
+
+document.querySelector('#'+brClassSel+'btn-logout').addEventListener("click",()=>{
+    localStorage.removeItem("email");
+    location.reload()
+})
+document.querySelector('#'+brClassSel+'btn-profil-logout').addEventListener("click",()=>{
+    localStorage.removeItem("email");
+    location.reload()
+})
