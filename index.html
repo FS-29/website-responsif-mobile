@@ -12,6 +12,41 @@
   </head>
   <body>
     <header>
+        <!-- navbar mobile -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-mobile shadow-sm">
+            <div class="container-fluid">
+              <a class="navbar-brand d-flex flex-row align-items-center fw-bold" href="./index.html">
+                <img class="logo-header" src="./assets/img/Logo.png" alt="logo" style="height: 3rem;">
+                <h1 class="fw-bold fs-4 m-0">Save Space Squad</h1>
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-semibold">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Edukasi</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Cerita Kami</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Event</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Berita</a>
+                  </li>
+                  <li class="nav-item" id="mobile-profilOff">
+                    <a class="nav-link" aria-current="page" href="login.html">Masuk</a>
+                  </li>
+                  <li class="nav-item d-none" id="mobile-profilOn">
+                    <a class="nav-link" aria-current="page" href="message.html">Dashboard</a>
+                    <a class="nav-link" id="mobile-btn-logout" aria-current="page" href="index.html">Keluar</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
         <!-- navbar desktop -->
         <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-desktop shadow-sm position-fixed vw-100" style="z-index: 5;">
             <div class="container-fluid ps-5 pe-5">
@@ -36,11 +71,15 @@
                   <li class="nav-item ps-3 pe-3">
                     <a class="nav-link" aria-current="page" href="#">Berita</a>
                   </li>
-                  <li class="nav-item ps-3 pe-5">
+                  <li class="nav-item ps-3 pe-3 d-flex flex-row align-items-center gap-2" id="desktop-profilOff">
+                    <a class="nav-link" aria-current="page" href="login.html">Masuk</a>
+                    <i class="bi bi-person-circle"></i>
+                  </li>
+                  <li class="nav-item ps-3 pe-5 d-none" id="desktop-profilOn">
                     <button class="nav-link p-0 d-flex flex-row align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
                         <img src="./assets/img/dummys.jpg" id="nav-profil-img" class="rounded-circle" alt="" style="width: 40px;">
                     </button>
-                    <div class="dropdown-menu rounded-4 " style="background-color: var(--color3); left: auto; right: 50px; top: 60px; ">
+                    <div class="dropdown-menu rounded-4 " id="desktop-profil-dropdown" style="background-color: var(--color3); left: auto; right: 50px; top: 60px; ">
                         <div class="d-flex flex-column align-items-center gap-3 p-3 ">
                             <div class="d-flex flex-column align-items-center gap-2">
                                 <img src="./assets/img/dummys.jpg" id="profil-img" class="rounded-circle" style="width: 100px;" alt="">
@@ -54,8 +93,8 @@
                                     </div>
                                 </button>
                             </a>
-                            <a href="./login.html" class="container-fluid p-0">
-                                <button  class="border-0 rounded-3 shadow container-fluid p-0" id="btn-logout" style="background-color: var(--color6);">
+                            <a href="./index.html" class="container-fluid p-0">
+                                <button  class="border-0 rounded-3 shadow container-fluid p-0" id="desktop-btn-logout" style="background-color: var(--color6);">
                                     <div class="container-fluid p-2 ps-4 d-flex flex-row align-items-center gap-2" >
                                         <i class="bi bi-box-arrow-right"  style="color: var(--color5);"></i>
                                         <h5 class="m-0" style="color: var(--color5);">Keluar</h5>
@@ -71,165 +110,168 @@
         </nav>
     </header>
 
-    <section class="Hero">
-      <div class="base-hero">
-        <h1>Ciptakan Lingkungan Aman untuk Semua Generasi</h1>
-        <h3>Selamat Datang di layanan Bimbingan Konseling</h3>
-        <button class="btn-aduan" onclick="togglePopup()">Kirim Aduan</button>
+    <section class="Hero container-fluid p-0 pt-5 d-flex flex-column align-items-center justify-content-start">
+      <div class="base-hero container-fluid p-5 d-flex flex-column align-items-center">
+        <h1 class="text-center fw-bold pt-5 pb-4 mt-5">Ciptakan Lingkungan Aman untuk Semua Generasi</h1>
+        <h3 class="text-center fw-normal mb-5" style="color: #8C8C8C;">Selamat Datang di layanan Bimbingan Konseling</h3>
+        <div>
+            <a href="./form-lapor.html">
+                <button class="btn-aduan btn-submit btn p-2 mb-5 text-light" id="kirim-aduan" style="background-color: var(--color5);">Kirim Aduan</button>
+            </a>
+        </div>
       </div>
       <div class="cartoon">
         <img id="cartoon-left" src="assets/img/Object 1.png" alt="">
         <img id="cartoon-right" src="assets/img/Object 2.png" alt="">
       </div>
-      <div class="hero-text">
-        <h2>Apa Itu Perundungan?</h2>
-        <p id="description">Perundungan (bullying) adalah perilaku agresif, merendahkan, atau mengintimidasi yang dilakukan secara berulang-ulang terhadap satu atau beberapa individu oleh orang lain atau sekelompok orang yang lebih kuat atau berkuasa. Perundungan dapat terjadi dalam berbagai konteks, termasuk di sekolah, tempat kerja, di lingkungan sosial, atau bahkan secara daring (cyberbullying). Perilaku perundungan seringkali bertujuan untuk menyakiti, menghina, atau mendominasi targetnya, dan dapat memiliki efek psikologis dan emosional yang serius pada korban.</p>
-        <button>Lihat Detail</button>
+      <div class="hero-text container-fluid p-5 pt-0 d-flex flex-column align-items-center gap-3">
+        <h2 class="text-center fw-bold">Apa Itu Perundungan?</h2>
+        <p id="description" class="text-center">Perundungan (bullying) adalah perilaku agresif, merendahkan, atau mengintimidasi yang dilakukan secara berulang-ulang terhadap satu atau beberapa individu oleh orang lain atau sekelompok orang yang lebih kuat atau berkuasa. Perundungan dapat terjadi dalam berbagai konteks, termasuk di sekolah, tempat kerja, di lingkungan sosial, atau bahkan secara daring (cyberbullying). Perilaku perundungan seringkali bertujuan untuk menyakiti, menghina, atau mendominasi targetnya, dan dapat memiliki efek psikologis dan emosional yang serius pada korban.</p>
+        <button class="btn text-light" style="background-color: var(--color5);">Lihat Detail</button>
       </div>
     </section>
 
-    <section class="panduan">
-      <div class="panduan-content">
-        <div>
-          <img  src="assets/img/Frame 4.png" alt="">
-          <h3>Pilih Bimbingan Konselor</h3>
-          <p>Pembing Konselor pilih dengan yang diinginkan.</p>
+    <section class="panduan container-fluid mt-5 mb-5 pt-5 pb-5 d-flex flex-column align-items-center" style="background-color: #E6F7FF;">
+        <div class="position-relative ms-5 me-5 col-6" style="height: 0.4rem; background-color: #BAE7FF; z-index: 1; " id="line"></div>
+        <div class="panduan-content row gap-4 justify-content-center position-relative" style="z-index: 2;">
+            <div class="d-flex flex-column col-3 align-items-center gap-2">
+            <img class="img-fluid p-1" src="assets/img/Frame 4.png" alt="">
+            <h4 class="text-center d-flex justify-content-center">Pilih Bimbingan Konselor</h4>
+            <p class="text-center d-flex justify-content-center">Pembing Konselor pilih dengan yang diinginkan.</p>
+            </div>
+            <div class="d-flex flex-column col-3 align-items-center gap-2">
+            <img class="img-fluid p-1" src="assets/img/frame 5.png" alt="">
+            <h4 class="text-center d-flex justify-content-center">Proses Bimbingan Konselor</h4>
+            <p class="text-center d-flex justify-content-center">Setelah memilih konselor akan memasuki forum chat  bersama konselor.</p>
+            </div>
+            <div class="d-flex flex-column col-3 align-items-center gap-2">
+            <img class="img-fluid p-1" src="assets/img/Frame 6.png" alt="">
+            <h4 class="text-center d-flex justify-content-center">Bimbingan Selesai</h4>
+            <br>
+            <p class="text-center d-flex justify-content-center">Pengajuan bimbingan konselor perudungan akan ditindak lanjuti oleh pembimbing konselor.</p>
+            </div>
         </div>
-        <div>
-          <img  src="assets/img/frame 5.png" alt="">
-          <h3>Proses Bimbingan Konselor</h3>
-          <p>Setelah memilih konselor akan memasuki forum chat  bersama konselor.</p>
-        </div>
-        <div>
-          <img  src="assets/img/Frame 6.png" alt="">
-          <h3>Bimbingan Selesai</h3>
-          <p>Pengajuan bimbingan konselor perudungan akan ditindak lanjuti oleh pembimbing konselor.</p>
-        </div>
-      </div>
-      <div id="line"></div>
     </section>
     
-    <article class="blog-cerita">
-      <div class="title">
-        <h2>Berbagi Cerita Dari Teman Kita</h2>
+    <article class="blog-cerita container-fluid d-flex flex-column align-items-center">
+      <div class="title d-flex flex-column align-items-center m-5">
+        <h2 class="fw-bold">Berbagi Cerita Dari Teman Kita</h2>
         <h4>Berbagi cerita dengan teman kita yang mengalami perudungan </h4>
       </div>
-      <div class="contents">
-        <div>
-          <img  src="assets/img/cerita1.png" alt="poster-cerita1">
-          <div class="description">
-            <h2>Ketika Dewasa Pun Bisa Menjadi Korban</h2>
-            <p>John adalah seorang profesional berbakat yang selalu bersemangat menjalani pekerjaannya...</p>
-            <div id="profil">
-              <img  src="assets/img/profil1.jpg" alt="">
-              <div id="profil-desc">
-                <h5>John Deep</h5>
-                <p>27 Januari 2020</p>
+      <div class="contents d-flex flex-row flex-wrap justify-content-center gap-4">
+        <div class="card" >
+            <img class="img-fluid" src="assets/img/cerita1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Ketika Dewasa Pun Bisa Menjadi Korban</h5>
+              <p class="card-text">John adalah seorang profesional berbakat yang selalu bersemangat menjalani pekerjaannya...</p>
+              <div class="d-flex flex-row gap-3" id="profil">
+                <img class="rounded-circle" src="assets/img/profil1.jpg" style="width: 50px; height: 50px;" alt="">
+                <div id="profil-desc">
+                  <h6 class="m-0 p-0 mb-1">John Deep</h6>
+                  <p class="m-0 p-0">27 Januari 2020</p>
+                </div>
               </div>
             </div>
-          </div>  
         </div>
-        <div>
-          <img  src="assets/img/cerita2.jpg" alt="poster-cerita1">
-          <div class="description">
-            <h2>Mengapa Melaporkan Bullying Sangat Penting</h2>
-            <p>pentingnya melaporkan tindak pembulian dan mengapa keberanian untuk berbicara merupakan...</p>
-            <div id="profil">
-              <img  src="assets/img/profil2.jpg" alt="">
-              <div id="profil-desc">
-                <h5>Jono</h5>
-                <p>29 Juli 2020</p>
+        <div class="card" >
+            <img class="img-fluid" src="assets/img/cerita2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Mengapa Melaporkan Bullying Sangat Penting</h5>
+              <p class="card-text">pentingnya melaporkan tindak pembulian dan mengapa keberanian untuk berbicara...</p>
+              <div class="d-flex flex-row gap-3" id="profil">
+                <img class="rounded-circle" src="assets/img/profil2.jpg" style="width: 50px; height: 50px;" alt="">
+                <div id="profil-desc">
+                  <h6 class="m-0 p-0 mb-1">Jono</h6>
+                  <p class="m-0 p-0">29 Juli 2020</p>
+                </div>
               </div>
             </div>
-          </div>  
         </div>
-        <div>
-          <img  src="assets/img/cerita3.jpg" alt="poster-cerita1">
-          <div class="description">
-            <h2>Mendukung Teman dan Teman Sebaya</h2>
-            <p>Bagaimana kita dapat menjadi teman yang baik dan mendukung teman-teman kita yang mungkin...</p>
-            <div id="profil">
-              <img  src="assets/img/profil3.jpg" alt="">
-              <div id="profil-desc">
-                <h5>Diandra anis</h5>
-                <p>1 Januari 2019</p>
+        <div class="card" >
+            <img class="img-fluid" src="assets/img/cerita3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Mendukung Teman dan Teman Sebaya</h5>
+              <p class="card-text">Bagaimana kita dapat menjadi teman yang baik dan mendukung teman-teman kita yang...</p>
+              <div class="d-flex flex-row gap-3" id="profil">
+                <img class="rounded-circle" src="assets/img/profil3.jpg" style="width: 50px; height: 50px;" alt="">
+                <div id="profil-desc">
+                  <h6 class="m-0 p-0 mb-1">Diandra anis</h6>
+                  <p class="m-0 p-0">1 Januari 2019</p>
+                </div>
               </div>
             </div>
-          </div>  
         </div>
       </div>
-      <div class="go-to-page">
-        <a href=""><h5>lihat lainnya ...</h5></a>
+      <div class="go-to-page m-5">
+        <a href="" ><h5 class="fw-bold" style="color: #434343; text-decoration: underline;">lihat lainnya ...</h5></a>
       </div>
     </article>
 
-    <article class="berita">
-      <div class="title">
-        <h2>Perundungan Bukanlah Berita Biasa</h2>
+    <article class="berita container-fluid d-flex flex-column align-items-center pt-5 pb-5" style="background-color:  #E6F7FF;">
+      <div class="title d-flex flex-column align-items-center gap-2 mb-5">
+        <h2 class="fw-bold">Perundungan Bukanlah Berita Biasa</h2>
         <h4>Menyuarakan Keadilan: Pelaporan dan Tindakan Terhadap Perundungan</h4>
       </div>
-      <div class="contents">
-        <div class="highlight">
-          <img  src="assets/img/Berita1.png" alt="">
-          <div class="description">
-            <h2>Bocah 12 Tahun di Gowa Dikeroyok Teman Sebaya, Simak Cara Mencegah Perundungan di Kalangan Anak-anak.</h2>
-            <p>TRIBUN-TIMUR.COM - Perundungan di kalangan anak-anak masih saja terjadi. Terbaru di Kabupaten Gowa, Sulawesi Selatan (Sulsel), bocah 12 tahun inisial FD jadi korban...</p>
-          </div>
-        </div>
-        <div class="side">
-          <div>
-            <img  src="assets/img/Berita2.png" alt="">
-            <div class="description">
-              <h2>Kasus siswa bakar sekolah di Temanggung, karena diduga 'sering dirundung'.</h2>
-              <p>BBC.COM - Sebab meskipun sudah ada Permendikbud 82 tahun 2015 tentang pencegahan dan penanggulangan tindak kekerasan di satuan pendidikan, tapi banyak...</p>
+      <div class="contents d-flex flex-row gap-4 justify-content-center flex-wrap">
+        <a href="https://makassar.tribunnews.com/2023/09/04/bocah-12-tahun-di-gowa-dikeroyok-teman-sebaya-simak-cara-mencegah-perundungan-di-kalangan-anak-anak" class="text-decoration-none">
+            <div class="highlight ">
+                <div class="card" >
+                    <img class="img-fluid" src="assets/img/Berita1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold mb-4">Bocah 12 Tahun di Gowa Dikeroyok Teman Sebaya, Simak Cara Mencegah Perundungan di Kalangan Anak-anak.</h5>
+                        <p class="card-text">TRIBUN-TIMUR.COM - Perundungan di kalangan anak-anak masih saja terjadi. Terbaru di Kabupaten Gowa, Sulawesi Selatan (Sulsel), bocah 12 tahun inisial FD jadi korban...</p>
+                    </div>
+                    <br><br><br>
+                </div>
             </div>
-          </div>
-          <div>
-            <img  src="assets/img/berita3.png" alt="">
-            <div class="description">
-              <h2>Mata siswi SD di Gresik ditusuk hingga buta - 'Perundungan di Indonesia sudah darurat'.</h2>
-              <p>BBC.COM - Jaringan Pemantau Pendidikan Indonesia (JPPI) mencatat sepanjang Januari-Agustus 2023 terdapat 379 anak usia sekolah menjadi korban...</p>
-            </div>
-          </div>
-          <div>
-            <img  src="assets/img/berita4.jpeg" alt="">
-            <div class="description">
-              <h2>Contoh Bullying di Sekolah: Kasus dan Cara Mengatasinya</h2>
-              <p>DETIK.COM - Bullying atau bisa disebut juga sebagai perundungan adalah peristiwa yang cukup sering ditemukan. Salah satunya terjadi bullying di lingkungan sekolah...</p>
-            </div>
-          </div>
+        </a>
+        
+        <div class="list-berita d-flex flex-column gap-4 ">
+            <a href="https://www.bbc.com/indonesia/articles/cd1n7m1xezdo" class="text-decoration-none">
+                <div class="card d-flex flex-row " >
+                    <img class="rounded-start img-fluid object-fit-cover" style="width: 8rem; " src="assets/img/Berita2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Kasus siswa bakar sekolah di Temanggung, karena diduga 'sering dirundung'.</h5>
+                        <p class="card-text">BBC.COM - Sebab meskipun sudah ada Permendikbud 82 tahun 2015 tentang pencegahan dan penanggulangan tindak kekerasan di satuan pendidikan, tapi banyak...</p>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.bbc.com/indonesia/articles/czr1xkdvk8jo" class="text-decoration-none">
+                <div class="card d-flex flex-row " >
+                    <img class="rounded-start img-fluid object-fit-cover" style="width: 8rem; " src="assets/img/berita3.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Mata siswi SD di Gresik ditusuk hingga buta - 'Perundungan di Indonesia sudah darurat'.</h5>
+                        <p class="card-text">BBC.COM - Jaringan Pemantau Pendidikan Indonesia (JPPI) mencatat sepanjang Januari-Agustus 2023 terdapat 379 anak usia sekolah menjadi korban...</p>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.detik.com/edu/detikpedia/d-6942070/contoh-bullying-di-sekolah-kasus-dan-cara-mengatasinya" class="text-decoration-none">
+                <div class="card d-flex flex-row " >
+                    <img class="rounded-start img-fluid object-fit-cover" style="width: 8rem;" src="assets/img/berita4.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Contoh Bullying di Sekolah: Kasus dan Cara Mengatasinya</h5>
+                        <p class="card-text">DETIK.COM - Bullying atau bisa disebut juga sebagai perundungan adalah peristiwa yang cukup sering ditemukan. Salah satunya terjadi bullying di lingkungan sekolah...</p>
+                    </div>
+                </div>
+            </a>
         </div>
       </div>
-      <div class="go-to-page">
-        <a href=""><h5>lihat lainnya ...</h5></a>
+      <div class="go-to-page m-5">
+        <a href=""><h5 class="fw-bold" style="color: #434343; text-decoration: underline;">lihat lainnya ...</h5></a>
       </div>
     </article>
 
-    <div class="float-container" >
-      <button class="float-button" onclick="togglePopup()">!</button>
+    <div class="float-container " >
+        <a href="./form-lapor.html">
+            <button class="float-button btn p-0">!</button>
+        </a>
     </div>
-
-    <!-- <div id="popup-container">
-      <div id="popup" class="content">
-        <h2>Form Aduan</h2>
-        <form id="Form-aduan">
-            <input type="text" id="name" placeholder="Nama Lengkap"><br>
-            <input type="text" id="city" placeholder="Kota Tinggal"><br>
-            <input type="email" id="email" placeholder="e-mail"><br>
-            <input type="number" id="zip-code" placeholder="Kode Pos"><br>
-            <input type="checkbox" id="status" name="Status">
-            <label for="Status" id="check">Dengan ini saya menyatakan data yang diisi pada form ini adalah benar dan telah sesuai</label><br>
-            <button type="submit" id="submit-form">Submit</button>
-            <div id="warning"></div>
-        </form>
-      </div>
-    </div> -->
 
     <footer class="footer-desktop pb-4"  style="background-color: var(--color5);">
         <div class="container-fluid d-flex justify-content-between p-4 pb-5">
           <div class="d-flex flex-row align-items-center gap-4 ps-4">
             <img src="./assets/svg/logo-white.svg" alt="" style="width: 45px;">
-            <h1 class="text-light fs-4">Save Space Squad</h1>
+            <h4 class="text-light">Save Space Squad</h4>
           </div>
           <div class="d-flex flex-row gap-3 pe-4">
             <a href=""><img src="./assets/svg/ig.svg" alt="instagram"></a>
