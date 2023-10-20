@@ -56,7 +56,7 @@
                             <i class="bi bi-person-badge" style="color: var(--color8);"></i>
                             <h5 class="m-0" style="color: var(--color8);">Profil</h5>
                         </div>
-                    </a>
+                    </button>
                 </li>
                 <li>
                     <button href="" class="border-0 rounded-3 shadow container-fluid p-0" style="background-color: var(--color7);">
@@ -64,7 +64,7 @@
                             <i class="bi bi-geo-alt-fill" style="color: var(--color8);"></i>
                             <h5 class="m-0" style="color: var(--color8);">Alamat</h5>
                         </div>
-                    </a>
+                    </button>
                 </li>
                 <li>
                     <button href="" class="border-0 rounded-3 shadow container-fluid p-0" style="background-color: var(--color7);">
@@ -80,7 +80,7 @@
                             <i class="bi bi-postcard-fill" style="color: var(--color8);"></i>
                             <h5 class="m-0" style="color: var(--color8);">Laporan</h5>
                         </div>
-                    </a>
+                    </button>
                 </li>
                 <li>
                     <button href="" class="border-0 rounded-3 shadow container-fluid p-0" style="background-color: var(--color9);">
@@ -88,32 +88,24 @@
                             <i class="bi bi-chat-left-dots-fill"  style="color: var(--color6);"></i>
                             <h5 class="m-0" style="color: var(--color6);">Pesan</h5>
                         </div>
-                    </a>
+                    </button>
                 </li>
                 <li>
-                    <button href="" class="border-0 rounded-3 shadow container-fluid p-0" style="background-color: var(--color7);">
+                    <button href="" class="border-0 rounded-3 shadow container-fluid p-0" id="mobile-btn-logout" style="background-color: var(--color7);">
                         <div class="container-fluid p-2 ps-4 d-flex flex-row align-items-center gap-2" >
                             <i class="bi bi-box-arrow-right"  style="color: var(--color8);"></i>
                             <h5 class="m-0" style="color: var(--color8);">Keluar</h5>
                         </div>
-                    </a>
+                    </button>
+                    <button class="d-none" id="mobile-btn-profil-logout"></button>
                 </li>
             </ul>
         </div>
     </div>
 
     <div class="container-fluid message-list mobile-view p-0 ps-2 pt-2">
-        <div class="d-grid p-0 gap-2">
-            <button class="btn rounded-start-5 p-2 shadow" style="--bs-btn-border-width:0;" data-bs-toggle="offcanvas" data-bs-target="#db-message" aria-controls="db-message" aria-label="Toggle docs navigation" >
-                <div class="d-flex flex-row align-items-center gap-4 p-2" >
-                    <img src="./assets/img/dummys.jpg" class="rounded-circle" style="width: 60px; height: 60px;" alt="">
-                    <div class="d-flex flex-column align-items-start gap-1">
-                        <h5 class="fw-semibold" style="margin: 0;">Agus (konselor)</h5>
-                        <p class="" style="margin: 0;">halo!!!!!!! test</p>
-                    </div>
-                </div>
-            </button>
-            
+        <div class="d-grid p-0 gap-2" id="mobile-messageList" >
+                       
         </div>
     </div>
 
@@ -123,31 +115,22 @@
                 <i class="bi bi-arrow-left"></i>
             </button>
             <div class="d-flex flex-row align-items-center gap-4 p-2" >
-                <img src="./assets/img/dummys.jpg" class="rounded-circle" style="width: 60px; height: 60px;" alt="">
+                <img src="./assets/img/dummys.jpg" id="mobile-header-img" class="rounded-circle" style="width: 60px; height: 60px;" alt="">
                 <div class="d-flex flex-column align-items-start gap-1">
-                    <h5 class="fw-semibold" style="margin: 0;">Agus</h5>
-                    <p class="" style="margin: 0;">konselor</p>
+                    <h5 class="fw-semibold" id="mobile-header-nama" style="margin: 0;"></h5>
+                    <p class="" id="mobile-header-role" style="margin: 0;"></p>
                 </div>
             </div>
         </div>
         <div class="offcanvas-body p-0 d-flex flex-column justify-content-end mb-3">
-            <div class="d-flex flex-column justify-content-end gap-3 overflow-y-auto" id="message-body">
-                <div class="d-flex justify-content-start ps-4" id="pesan-masuk">
-                    <div class="rounded-4 ps-2 pe-2" style="max-width: 80vw; background-color: var(--color11);">
-                        <p class="m-2">test fwij efijwe fijweifji fwjbfib wbhfhb wijbefi j b af</p>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-end pe-4" id="pesan-keluar">
-                    <div class="rounded-4 ps-2 pe-2" style="max-width: 80vw; background-color: var(--color12);">
-                        <p class="m-2">te fwjbfib wbhfhb wijbefi j b af</p>
-                    </div>
-                </div>
+            <div class="d-flex flex-column justify-content-end gap-3 overflow-y-auto" id="mobile-message-body">
+
             </div>
         </div>
         <div class="input-pesan" style="background-color: var(--color3);">
-            <div class="container-fluid d-flex flex-row justify-content-center gap-2 p-2" id="message-inpnut">
+            <div class="container-fluid d-flex flex-row justify-content-center gap-2 p-2" id="mobile-message-input">
                 <input type="text" id="input-text" class="form-control rounded-4 ps-3 pe-3" >
-                <button class="rounded-circle btn" style="border: none;"><i class="bi bi-send-fill" style="color: var(--color6);"></i></button>
+                <button class="rounded-circle btn" id="mobile-sendBtn" style="border: none;"><i class="bi bi-send-fill" style="color: var(--color6);"></i></button>
             </div>
         </div>
     </div>
@@ -178,13 +161,13 @@
               </li>
               <li class="nav-item ps-3 pe-5">
                 <button class="nav-link p-0 d-flex flex-row align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
-                    <img src="./assets/img/dummys.jpg" class="rounded-circle" alt="" style="width: 40px;">
+                    <img src="./assets/img/dummys.jpg" id="nav-profil-img" class="rounded-circle" alt="" style="width: 40px;">
                 </button>
                 <div class="dropdown-menu rounded-4 " style="background-color: var(--color3); left: auto; right: 50px; top: 60px; ">
                     <div class="d-flex flex-column align-items-center gap-3 p-3 ">
                         <div class="d-flex flex-column align-items-center gap-2">
-                            <img src="./assets/img/dummys.jpg" class="rounded-circle" style="width: 100px;" alt="">
-                            <h4 class="fw-bold">agus</h4>
+                            <img src="./assets/img/dummys.jpg" id="profil-img" class="rounded-circle" style="width: 100px;" alt="">
+                            <h4 class="fw-bold" id="profil-name"></h4>
                         </div>
                         <a href="./message.html" class="container-fluid p-0">
                             <button  class="border-0 rounded-3 shadow container-fluid p-0" style="background-color: var(--color6);">
@@ -194,14 +177,12 @@
                                 </div>
                             </button>
                         </a>
-                        <a href="./login.html" class="container-fluid p-0">
-                            <button  class="border-0 rounded-3 shadow container-fluid p-0" style="background-color: var(--color6);">
+                        <button  class="border-0 rounded-3 shadow container-fluid p-0" id="desktop-btn-profil-logout" style="background-color: var(--color6);">
                                 <div class="container-fluid p-2 ps-4 d-flex flex-row align-items-center gap-2" >
                                     <i class="bi bi-box-arrow-right"  style="color: var(--color5);"></i>
                                     <h5 class="m-0" style="color: var(--color5);">Keluar</h5>
                                 </div>
-                            </button>
-                        </a>
+                        </button>
                     </div> 
                 </div>
               </li>
@@ -217,7 +198,7 @@
                     <li>
                         <a href="" class="text-decoration-none">
                             <div class="container-fluid p-2 ps-4 pb-4 d-flex flex-column align-items-center gap-3">
-                                <img src="./assets/img/dummys.jpg" class="rounded-circle" style="height: 8rem;" alt="" id="tumbnail-profil">
+                                <img src="./assets/img/dummys.jpg" id="desktop-profil-sdbar" class="rounded-circle" style="height: 8rem;" alt="" id="tumbnail-profil">
                                 <h5 class="m-0" style="color: var(--color5);">Profil</h5>
                             </div>
                         </a>
@@ -255,64 +236,46 @@
                         </button>
                     </li>
                     <li>
-                        <a href="./login.html" class="container-fluid p-0">
-                            <button href="" class="border-0 rounded-3 shadow container-fluid p-0" style="background-color: var(--color7);">
-                                <div class="container-fluid p-2 ps-4 d-flex flex-row align-items-center gap-2" >
-                                    <i class="bi bi-box-arrow-right"  style="color: var(--color8);"></i>
-                                    <h5 class="m-0" style="color: var(--color8);">Keluar</h5>
-                                </div>
-                            </button>
-                        </a>
+                        <button href="" class="border-0 rounded-3 shadow container-fluid p-0" id="desktop-btn-logout" style="background-color: var(--color7);">
+                            <div class="container-fluid p-2 ps-4 d-flex flex-row align-items-center gap-2" >
+                                <i class="bi bi-box-arrow-right"  style="color: var(--color8);"></i>
+                                <h5 class="m-0" style="color: var(--color8);">Keluar</h5>
+                            </div>
+                        </button>
                     </li>
                 </ul>
             </div>
             <div class="col-3 border-end border-3">
                 <div class="container-fluid message-list p-0 ps-2 pt-2">
-                    <div class="d-grid p-0 gap-2">
-                        <button class="btn rounded-start-5 p-2 shadow" style="--bs-btn-border-width:0;" data-bs-toggle="" data-bs-target="" aria-controls="" aria-label="" >
-                            <div class="d-flex flex-row align-items-center gap-4 p-2" >
-                                <img src="./assets/img/dummys.jpg" class="rounded-circle" style="width: 60px; height: 60px;" alt="">
-                                <div class="d-flex flex-column align-items-start gap-1">
-                                    <h5 class="fw-semibold" style="margin: 0;">Agus</h5>
-                                    <p class="" style="margin: 0;">halo!!!!!!! test</p>
-                                </div>
-                            </div>
-                        </button>
+                    <div class="d-grid p-0 gap-2" id="desktop-messageList">
+                       
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-xl-7 ps-0 d-flex flex-column" style="height: 80vh;">
+            <div class="col-6 col-xl-7 ps-0 d-flex flex-column d-none" id="content-message" style="height: 80vh;">
                 <div class="d-flex border-bottom shadow-sm justify-content-start" style="background-color: var(--color3); color: var(--color5);">
-                    <button type="button" class="btn p-1 border-0" data-bs-dismiss="" aria-label="Close" data-bs-target="">
+                    <button type="button" class="btn p-1 border-0" id="desktop-close-message" data-bs-dismiss="" aria-label="Close" data-bs-target="">
                         <i class="bi bi-arrow-left"></i>
                     </button>
                     <div class="d-flex flex-row align-items-center gap-4 p-2" >
-                        <img src="./assets/img/dummys.jpg" class="rounded-circle" style="width: 60px; height: 60px;" alt="">
+                        <img src="./assets/img/dummys.jpg" id="desktop-header-img" class="rounded-circle" style="width: 60px; height: 60px;" alt="">
                         <div class="d-flex flex-column align-items-start gap-1">
-                            <h5 class="fw-semibold" style="margin: 0;">Agus</h5>
-                            <p class="" style="margin: 0;">konselor</p>
+                            <h5 class="fw-semibold" id="desktop-header-nama" style="margin: 0;"></h5>
+                            <p class="" id="desktop-header-role" style="margin: 0;"></p>
                         </div>
                     </div>
                 </div>
                 <div class=" d-flex flex-column justify-content-end flex-fill" >
                     <div class="p-0 d-flex flex-column justify-content-end mb-3">
-                        <div class="d-flex flex-column justify-content-end gap-3 overflow-y-auto" id="message-body">
-                            <div class="d-flex justify-content-start ps-4" id="pesan-masuk">
-                                <div class="rounded-4 ps-2 pe-2" style="max-width: 80vw; background-color: var(--color11);">
-                                    <p class="m-2">test fwij efijwe fijweifji fwjbfib wbhfhb wijbefi j b af</p>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-end pe-4" id="pesan-keluar">
-                                <div class="rounded-4 ps-2 pe-2" style="max-width: 80vw; background-color: var(--color12);">
-                                    <p class="m-2">te fwjbfib wbhfhb wijbefi j b af</p>
-                                </div>
-                            </div>
+                        <div class="d-flex flex-column justify-content-end gap-3 overflow-y-auto" id="desktop-message-body">
+                            
+                            
                         </div>
                     </div>
                     <div class="input-pesan" style="background-color: var(--color3);">
-                        <div class="container-fluid d-flex flex-row justify-content-center gap-2 p-2" id="message-inpnut">
+                        <div class="container-fluid d-flex flex-row justify-content-center gap-2 p-2" id="desktop-message-input">
                             <input type="text" id="input-text" class="form-control rounded-4 ps-3 pe-3" >
-                            <button class="rounded-circle btn" style="border: none;"><i class="bi bi-send-fill" style="color: var(--color6);"></i></button>
+                            <button class="rounded-circle btn" id="desktop-sendBtn" style="border: none;"><i class="bi bi-send-fill" style="color: var(--color6);"></i></button>
                         </div>
                     </div>
                 </div>
@@ -320,7 +283,7 @@
         </div>
     </div>  
 
-     <footer class="footer-desktop pb-4"  style="background-color: var(--color5);">
+    <footer class="footer-desktop pb-4"  style="background-color: var(--color5);">
         <div class="container-fluid d-flex justify-content-between p-4 pb-5">
           <div class="d-flex flex-row align-items-center gap-4 ps-4">
             <img src="./assets/svg/logo-white.svg" alt="" style="width: 45px;">
@@ -335,5 +298,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./script/message.js"></script>
 </body>
 </html>
