@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+/* desktop */
+@media (min-width: 768px) { 
+    .navbar-mobile{
+        display: none;
+    }
+    #line{
+        top: 4rem;
+    }
+    .blog-cerita .card{
+        width: 25rem;
+    }
+    .highlight , .list-berita{
+        width: 40rem;
+    }
+}
+/* mobile */
+@media (max-width: 768px) { 
+    .navbar-desktop{
+        display: none;
+    }
+    #line{
+        top: 2.5rem;
+    }
+    .blog-cerita .card{
+        width: 20rem;
+    }
+}
+
+.cartoon *{
+    box-sizing: border-box;
+}
+.cartoon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-self: stretch;
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    top: -120px;
+    z-index: -1;
+}
+
+.cartoon img{
+    position: relative;
+    overflow: hidden;
+}
+
+#cartoon-left{
+    left: -7rem;
+}
+
+#cartoon-right{
+    right: -6rem
+}
+
+.float-container {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    border: none;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+    z-index: 4;
+}
+.float-button {
+    background-color: #24305E;
+    border: none;
+    border-radius: 50%;
+    border-width: 0.3rem;
+    border-style: solid;
+    border-color: #F9FBFD;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    color: #F9FBFD;
+    font-size: 2rem;
+    font-weight: 900;
+    z-index: 4;
+}
