@@ -6,7 +6,7 @@ body{
 }
 
 .image{
-    background: url('img/login.png') center no-repeat;
+    background: url('../assets/img/login.png') center no-repeat;
     background-color: #ffffff;
     background-size: cover;
     height: 100vh;

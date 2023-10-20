@@ -14,7 +14,7 @@ let contentPesanAdmin = [
     {masuk:'Perkenalkan Saya Robert, Admin dari website yang akan memandu kamu', keluar:''},
 ]
 
-if (winWidth<=992) {
+if (winWidth<=768) {
     brClassSel = 'mobile-'
 } else {
     brClassSel = 'desktop-'
@@ -33,7 +33,7 @@ async function getDataFrom(localData) {
 }
 function addNewMessageList(data) {
     let element = ''
-    if (winWidth<=992) {
+    if (winWidth<=768) {
         data.forEach((dataPengirim,index) => {
             element = element+`<button class="btn rounded-start-5 p-2 shadow" style="--bs-btn-border-width:0;" data-bs-toggle="offcanvas" data-bs-target="#db-message" aria-controls="db-message" aria-label="Toggle docs navigation"  id="mobile-pesanKe-${index+1}" onclick="pesanClicked(event)" >
                                     <div class="d-flex flex-row align-items-center gap-4 p-2" >
@@ -161,7 +161,7 @@ function pesanClicked(e){
     role = document.querySelector('#'+idTarget+' p').textContent
     // console.log()
     changeHeaderPesan(url,nama,role)
-    if (winWidth>992) {
+    if (winWidth>768) {
         document.querySelector('#content-message').className = 'col-6 col-xl-7 ps-0 d-flex flex-column'
     }
 
@@ -174,7 +174,7 @@ getDataKonselor()
 getDataAdmin()
 
 document.querySelector('#desktop-close-message').addEventListener("click",()=>{
-    if (winWidth>992) {
+    if (winWidth>768) {
         document.querySelector('#content-message').className = 'col-6 col-xl-7 ps-0 d-flex flex-column d-none'
     }
 })

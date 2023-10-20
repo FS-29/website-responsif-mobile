@@ -16,7 +16,7 @@ async function dataRegister({
             },
             body: JSON.stringify({
                 role: role,
-                nama_lengkap: namaLengkap,
+                name: namaLengkap,
                 username: username,
                 email: email,
                 password: password,
@@ -24,9 +24,11 @@ async function dataRegister({
         });
         const result = await res.json();
 
-        console.log(result);
+        // console.log(result);
 
         alert('register success');
+        localStorage.setItem('email', email);
+        window.location.href='/'
     } catch (error) {
         alert('register failed');
     }

@@ -24,6 +24,7 @@ async function dataLogin({
 
     localStorage.setItem('email', user.email);
     alert('login success');
+    window.location.href='/'
 }
 
 const formLogin = document.getElementById('form-login');
@@ -54,7 +55,7 @@ formLogin.addEventListener('submit', async function() {
 
     function validatePassword() {
       const passwordValue = password.trim();
-      var passwordRegExp = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+      var passwordRegExp = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}$/;
       if (!passwordRegExp.test(passwordValue)) {
         alert("Password minimal 8 karakter");
         return false;

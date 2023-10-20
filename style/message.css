@@ -2,13 +2,13 @@
     font-family: 'Plus Jakarta Sans';
 }
 /* dekstop */
-@media (min-width: 992px) { 
+@media (min-width: 768px) { 
     .navbar-mobile, .mobile-view{
         display: none;
     }
 }
 /* mobile */
-@media (max-width: 992px) { 
+@media (max-width: 768px) { 
     .navbar-desktop, footer, .desktop-view{
         display: none;
     }
