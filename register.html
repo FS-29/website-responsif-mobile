@@ -6,6 +6,8 @@
     <title>Register</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src="register.js" defer></script>
+
   </head>
   <body>
     <div class="login container-fluid">
@@ -19,47 +21,49 @@
                         <p>Silahkan isi data Anda</p>
                     </div>
                     <div class="login-form">
-                        <div>
-                            <label for="email" class="form-label">Role</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="user-check" id="user-check">
-                            <label class="form-check-label" for="user-check">User</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="konselor-check" id="konselor-check">
-                            <label class="form-check-label" for="konselor-check">Konselor</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="admin-check" id="admin-check">
-                            <label class="form-check-label" for="admin-check">Admin</label>
-                        </div>
+                        <form action="/" method="get" id="form-register">
+                            <div>
+                                <label for="email" class="form-label">Role</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="role-check" id="role-check" value="user" required>
+                                <label class="form-check-label" for="role-check">User</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="role-check" id="role-check" value="konselor">
+                                <label class="form-check-label" for="role-check">Konselor</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="role-check" id="role-check" value="admin">
+                                <label class="form-check-label" for="role-check">Admin</label>
+                            </div>
+    
+                            <div>
+                                <label for="nama-lengkap" class="form-label">Nama Lengkap</label>
+                                <input type="text" class="form-control" id="nama-lengkap" placeholder="Masukkan nama lengkap Anda" required>
+                            </div>
+    
+                            <div>
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="username" placeholder="Masukkan username Anda" required>
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Masukkan email Anda" required>
+                            </div>
+    
+                            <div>
+                                <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Masukkan password Anda" required>
+                            </div>
 
-                        <div>
-                            <label for="email" class="form-label">Nama Lengkap</label>
-                            <input type="email" class="form-control" id="nama-lengkap" placeholder="Masukkan nama lengkap Anda">
-                        </div>
-
-                        <div>
-                            <label for="email" class="form-label">Username</label>
-                            <input type="email" class="form-control" id="username" placeholder="Masukkan username Anda">
-                        </div>
-                        
-                        <div>
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Masukkan email Anda">
-                        </div>
-
-                        <div>
-                            <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Masukkan password Anda">
-                        </div>
-                
-                        <button class="login">Register</button>
+                            <button class="login">Register</button>
 
                         <div class="text-center">
-                            <span class="d-inline">Sudah mempunyai akun! <a href="#" class="d-inline text-decoration-none">Login</a></span>
+                            <span class="d-inline">Sudah mempunyai akun! <a href="login-page.html" class="d-inline text-decoration-none">Login</a></span>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
